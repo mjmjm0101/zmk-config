@@ -1,0 +1,14 @@
+
+if SHIELD_SPLIT_ERGO_TB_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "split_ergo_tb"
+
+endif
+
+if SHIELD_SPLIT_ERGO_TB_LEFT || SHIELD_SPLIT_ERGO_TB_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

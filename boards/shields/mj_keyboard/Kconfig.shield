@@ -1,0 +1,4 @@
+config SHIELD_SPLIT_ERGO_TB_LEFT
+    def_bool $(shields_list_contains,split_ergo_tb_left)
+config SHIELD_SPLIT_ERGO_TB_RIGHT
+    def_bool $(shields_list_contains,split_ergo_tb_right)
