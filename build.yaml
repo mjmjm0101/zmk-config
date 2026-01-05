@@ -6,7 +6,7 @@
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
 # board: [ "nice_nano" ]
-# shield: [ "corne_left", "corne_right" ]
+# shield: [ "split_ergo_tb_left", "split_ergo_tb_right" ]
 # include:
 #   - board: bdn9_rev2
 #   - board: nice_nano
@@ -17,4 +17,16 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
----
+# ---
+
+include:
+  - board: akdk_bt1
+    shield: split_ergo_tb_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: akdk_bt1
+    shield: split_ergo_tb_right
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: akdk_bt1
+    shield: settings_reset
