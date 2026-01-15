@@ -17,17 +17,19 @@
             label = "PURE_GRAVE";
         };
 
-        pure_caret: pure_caret {
+        pure_tilde: pure_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
                 &kp LCTRL  &kp LCTRL
                 &kp LALT   &kp LALT
-                &kp LSHIFT &kp LSHIFT
                 &kp LGUI   &kp LGUI
-                &kp CARET
+                &kp LSHIFT &kp LSHIFT
+                &kp LSHIFT
+                &kp GRAVE
+                &kp LSHIFT
             >;
-            label = "PURE_CARET";
+            label = "PURE_TILDE";
         };
     };
     
