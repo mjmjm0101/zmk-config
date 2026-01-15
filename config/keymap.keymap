@@ -24,17 +24,17 @@
         layer_0 {
             bindings = <
 &kp ESC         &kp Q              &kp W    &kp E           &kp R             &kp T  &kp Y  &kp U      &kp I           &kp O        &kp P          &kp BSPC
-&kp LCTRL       &kp A              &kp S    &kp D           &kp F             &kp G  &kp H  &kp J      &kp K           &kp L        &kp SEMICOLON  &kp MINUS
-&kp LEFT_SHIFT  &kp Z              &kp X    &kp C           &kp V             &kp B  &kp N  &kp M      &kp COMMA       &kp DOT      &kp COLON      &kp ENTER
-&kp LEFT_ALT    &kp LA(LS(LCTRL))  &kp TAB  &kp LANGUAGE_2  &kp LEFT_COMMAND  &mo 1  &mo 2  &kp SPACE  &kp LANGUAGE_1  &kp LS(TAB)  &kp SLASH      &kp EQUAL
+&kp LCTRL       &kp A              &kp S    &kp D           &kp F             &kp G  &kp H  &kp J      &kp K           &kp L        &kp SEMICOLON  &kp ENTER
+&kp LEFT_SHIFT  &kp Z              &kp X    &kp C           &kp V             &kp B  &kp N  &kp M      &kp COMMA       &kp DOT      &kp COLON      &kp MINUS
+&kp LEFT_ALT    &kp LA(LS(LCTRL))  &kp TAB  &kp LANGUAGE_2  &kp LEFT_COMMAND  &mo 1  &mo 2  &kp SPACE  &kp LANGUAGE_1  &kp LS(TAB)  &kp SLASH      &kp GRAVE
             >;
         };
 
         layer_1 {
             bindings = <
 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp PIPE       &kp QUESTION     &kp SINGLE_QUOTE   &kp COMMA   &kp N7     &kp N8        &kp N9     &kp AT_SIGN  &kp BACKSPACE
-&kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SLASH      &kp AMPERSAND  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp PERIOD  &kp N4     &kp N5        &kp N6     &kp INT_YEN  &kp CARET
-&kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH  &kp MINUS      &pure_tilde      &pure_grave        &kp N0      &kp N1     &kp N2        &kp N3     &kp DOLLAR   &kp ENTER
+&kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SLASH      &kp AMPERSAND  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp PERIOD  &kp N4     &kp N5        &kp N6     &kp INT_YEN  &kp ENTER
+&kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH  &kp MINUS      &kp SEMICOLON    &kp MINUS          &kp N0      &kp N1     &kp N2        &kp N3     &kp DOLLAR   &kp GRAVE
 &kp LESS_THAN         &kp GREATER_THAN       &trans         &trans         &kp LEFT_SHIFT   &trans             &kp PLUS    &kp MINUS  &kp ASTERISK  &kp SLASH  &kp PERCENT  &kp EQUAL
             >;
         };
