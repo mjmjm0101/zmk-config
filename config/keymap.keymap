@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-
     macros {
         pure_grave: pure_grave {
             compatible = "zmk,behavior-macro";
@@ -18,7 +17,6 @@
             label = "PURE_TILDE";
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -37,7 +35,7 @@
 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp PIPE       &kp QUESTION     &kp SINGLE_QUOTE   &kp COMMA   &kp N7     &kp N8        &kp N9     &kp AT_SIGN  &kp BACKSPACE
 &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SLASH      &kp AMPERSAND  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp PERIOD  &kp N4     &kp N5        &kp N6     &kp INT_YEN  &kp CARET
 &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH  &kp MINUS      &pure_tilde      &pure_grave        &kp N0      &kp N1     &kp N2        &kp N3     &kp DOLLAR   &kp ENTER
-&kp LESS_THAN         &kp GREATER_THAN       &trans         &trans         &trans           &trans             &kp PLUS    &kp MINUS  &kp ASTERISK  &kp SLASH  &kp PERCENT  &kp EQUAL
+&kp LESS_THAN         &kp GREATER_THAN       &trans         &trans         &kp LEFT_SHIFT   &trans             &kp PLUS    &kp MINUS  &kp ASTERISK  &kp SLASH  &kp PERCENT  &kp EQUAL
             >;
         };
 
