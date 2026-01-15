@@ -2,6 +2,35 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    
+    macros {
+        pure_grave: pure_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LCTRL  &kp LCTRL
+                &kp LALT   &kp LALT
+                &kp LSHIFT &kp LSHIFT
+                &kp LGUI   &kp LGUI
+                &kp GRAVE
+            >;
+            label = "PURE_GRAVE";
+        };
+
+        pure_caret: pure_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LCTRL  &kp LCTRL
+                &kp LALT   &kp LALT
+                &kp LSHIFT &kp LSHIFT
+                &kp LGUI   &kp LGUI
+                &kp CARET
+            >;
+            label = "PURE_CARET";
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
