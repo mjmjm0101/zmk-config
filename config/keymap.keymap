@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+
     macros {
         pure_grave: pure_grave {
             compatible = "zmk,behavior-macro";
@@ -17,6 +18,7 @@
             label = "PURE_TILDE";
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
