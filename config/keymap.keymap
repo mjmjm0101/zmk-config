@@ -2,37 +2,22 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    
     macros {
         pure_grave: pure_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LCTRL  &kp LCTRL
-                &kp LALT   &kp LALT
-                &kp LSHIFT &kp LSHIFT
-                &kp LGUI   &kp LGUI
-                &kp GRAVE
-            >;
+            bindings = <&kp LCTRL &kp LCTRL &kp LALT &kp LALT &kp LSHIFT &kp LSHIFT &kp LGUI &kp LGUI &kp GRAVE>;
             label = "PURE_GRAVE";
         };
 
         pure_tilde: pure_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LCTRL  &kp LCTRL
-                &kp LALT   &kp LALT
-                &kp LGUI   &kp LGUI
-                &kp LSHIFT &kp LSHIFT
-                &kp LSHIFT
-                &kp GRAVE
-                &kp LSHIFT
-            >;
+            bindings = <&kp LCTRL &kp LCTRL &kp LALT &kp LALT &kp LGUI &kp LGUI &kp LSHIFT &kp LSHIFT &kp LSHIFT &kp GRAVE &kp LSHIFT>;
             label = "PURE_TILDE";
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,7 +34,7 @@
             bindings = <
 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp PIPE       &kp QUESTION     &kp SINGLE_QUOTE   &kp COMMA   &kp N7     &kp N8        &kp N9     &kp AT_SIGN  &kp BACKSPACE
 &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SLASH      &kp AMPERSAND  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp PERIOD  &kp N4     &kp N5        &kp N6     &kp INT_YEN  &kp CARET
-&kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH  &kp MINUS      &kp TILDE        &kp GRAVE          &kp N0      &kp N1     &kp N2        &kp N3     &kp DOLLAR   &kp ENTER
+&kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH  &kp MINUS      &pure_tilde      &pure_grave        &kp N0      &kp N1     &kp N2        &kp N3     &kp DOLLAR   &kp ENTER
 &kp LESS_THAN         &kp GREATER_THAN       &trans         &trans         &trans           &trans             &kp PLUS    &kp MINUS  &kp ASTERISK  &kp SLASH  &kp PERCENT  &kp EQUAL
             >;
         };
