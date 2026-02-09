@@ -23,6 +23,13 @@
                 <&macro_release>,
                 <&mo MACRO_PLACEHOLDER>;
         };
+
+        escape_and_eisu: escape_and_eisu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp LANGUAGE_2>;
+            label = "ESCAPE_AND_EISU";
+        };
     };
 
     keymap {
@@ -30,10 +37,10 @@
 
         layer_0 {
             bindings = <
-&kp ESC           &kp Q         &kp W      &kp E           &kp R      &kp T           &kp Y                   &kp U                   &kp I           &kp O      &kp P          &kp BSPC
-&kp TAB           &kp A         &kp S      &kp D           &kp F      &kp G           &kp H                   &kp J                   &kp K           &kp L      &kp SEMICOLON  &kp COLON
-&kp LCTRL         &kp Z         &kp X      &kp C           &kp V      &kp B           &kp N                   &kp M                   &kp COMMA       &kp DOT    &kp SLASH      &kp MINUS
-&kp LEFT_COMMAND  &kp LEFT_ALT  &kp ENTER  &kp LANGUAGE_2  &kp SPACE  &kp LEFT_SHIFT  &cheat_layer_key 2 F20  &cheat_layer_key 1 F19  &kp LANGUAGE_1  &kp ENTER  &kp EQUAL      &kp TILDE
+&escape_and_eisu  &kp Q         &kp W    &kp E           &kp R      &kp T           &kp Y                   &kp U                   &kp I           &kp O      &kp P          &kp BSPC
+&kp LCTRL         &kp A         &kp S    &kp D           &kp F      &kp G           &kp H                   &kp J                   &kp K           &kp L      &kp SEMICOLON  &kp COLON
+&kp LEFT_SHIFT    &kp Z         &kp X    &kp C           &kp V      &kp B           &kp N                   &kp M                   &kp COMMA       &kp DOT    &kp SLASH      &kp MINUS
+&kp LEFT_COMMAND  &kp LEFT_ALT  &kp TAB  &kp LANGUAGE_2  &kp SPACE  &kp LEFT_SHIFT  &cheat_layer_key 2 F20  &cheat_layer_key 1 F19  &kp LANGUAGE_1  &kp ENTER  &kp EQUAL      &kp TILDE
             >;
         };
 
