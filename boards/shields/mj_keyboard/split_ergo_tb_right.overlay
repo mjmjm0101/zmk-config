@@ -71,7 +71,3 @@
     };
 };
 
-&pointing_device {
-    status = "okay";
-    device = <&trackball>;
-};
