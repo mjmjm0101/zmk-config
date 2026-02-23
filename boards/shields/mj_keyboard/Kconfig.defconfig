@@ -1,5 +1,5 @@
 
-if SHIELD_SPLIT_ERGO_TB_LEFT
+if SHIELD_SPLIT_ERGO_TB_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "split_ergo_tb"
