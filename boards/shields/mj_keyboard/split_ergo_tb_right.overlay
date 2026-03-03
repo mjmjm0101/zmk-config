@@ -4,6 +4,18 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include "layouts.dtsi"
 
+
+&zip_temp_layer {
+    excluded-positions = <
+        18
+        19
+        31
+        42
+    >;
+    require-prior-idle-ms = <200>;
+};
+
+
 / {
     chosen {
         zmk,physical-layout = &physical_layout0;
@@ -79,16 +91,6 @@
             low-power-enable;
         };
     };
-};
-
-&zip_temp_layer {
-    excluded-positions = <
-        19
-        20
-        32
-        43
-    >;
-    require-prior-idle-ms = <200>;
 };
 
 &spi0 {
