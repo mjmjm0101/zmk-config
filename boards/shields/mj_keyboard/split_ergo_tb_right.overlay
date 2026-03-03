@@ -50,6 +50,10 @@
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
             &zip_temp_layer 3 3000
         >;
+        scroller {
+            layers = <2>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
 };
 
@@ -104,6 +108,3 @@
     };
 };
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 3 2000>;
-};
