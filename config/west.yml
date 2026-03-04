@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/tsukasakubouchi
   projects:
     - name: zmk-pointing-acceleration
-      remote: pointing-accelerration
+      remote: pointing-acceleration
       revision: main
     - name: zmk
       remote: zmkfirmware
