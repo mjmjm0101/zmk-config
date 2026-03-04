@@ -5,7 +5,7 @@ manifest:
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
     - name: pointing-acceleration
-      url-base: https://github.com/tsukasakubouchi
+      url-base: https://github.com/tomzy-h
   projects:
     - name: zmk-pointing-acceleration
       remote: pointing-acceleration
