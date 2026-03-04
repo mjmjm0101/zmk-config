@@ -4,11 +4,11 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
-    - name: oleksandrmaslov
-      url-base: https://github.com/oleksandrmaslov
+    - name: pointing-acceleration
+      url-base: https://github.com/tsukasakubouchi
   projects:
     - name: zmk-pointing-acceleration
-      remote: oleksandrmaslov
+      remote: pointing-accelerration
       revision: main
     - name: zmk
       remote: zmkfirmware
