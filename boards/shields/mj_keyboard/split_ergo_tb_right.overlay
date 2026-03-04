@@ -1,6 +1,7 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include "layouts.dtsi"
 
@@ -13,6 +14,16 @@
         42
     >;
     require-prior-idle-ms = <200>;
+};
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;  // For relative input devices
+    track-remainders;             // Accumulate fractional movements
+    min-factor = <800>;          // 0.8x at very slow speeds
+    max-factor = <3000>;         // 3.0x at fast speeds
+    speed-threshold = <1200>;     // 1200 counts/sec for 1x
+    speed-max = <6000>;          // 6000 counts/sec for max accel
+    acceleration-exponent = <2>;  // Quadratic acceleration curve
 };
 
 / {
@@ -59,9 +70,10 @@
         device = <&trackball>;
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-            &zip_x_scaler 4 5
-            &zip_y_scaler 3 3
+            &zip_x_scaler 2 5
+            &zip_y_scaler 1 2
             &zip_temp_layer 3 3000
+            &pointer_accel
         >;
         scroller {
             layers = <2>;
@@ -69,6 +81,7 @@
                 &zip_xy_to_scroll_mapper
                 &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
                 &zip_scroll_scaler 1 50
+                &pointer_accel
             >;
         };
     };
