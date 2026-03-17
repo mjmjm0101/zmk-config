@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/sekigon-gonnoc
     - name: pointing-acceleration
       url-base: https://github.com/rain-bbb
+    - name: yamaryu211
+      url-base: https://github.com/yamaryu211
   projects:
     - name: zmk-pointing-acceleration
       remote: pointing-acceleration
@@ -16,6 +18,9 @@ manifest:
       import: app/west.yml
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
+      revision: main
+    - name: zmk-input-processor-temp-layer-threshold
+      remote: yamaryu211
       revision: main
   self:
     path: config

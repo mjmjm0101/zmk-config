@@ -6,15 +6,33 @@
 #include "layouts.dtsi"
 
 
-&zip_temp_layer {
-    excluded-positions = <
-        6
-        7
-        18
-        19
-        41
-    >;
-    require-prior-idle-ms = <200>;
+/ {
+    zip_temp_layer_threshold: zip_temp_layer_threshold {
+        compatible = "zmk,input-processor-temp-layer-threshold";
+        #input-processor-cells = <2>;
+        
+        // Cumulative movement required before activation
+        // AML発動に必要な累積移動量
+        threshold = <15>;
+        
+        // Key positions that won't deactivate the layer
+        // 以下で指定したキー以外を押すとAML解除
+        excluded-positions = <
+            6
+            7
+            18
+            19
+            41
+        >;
+        
+        // Don't activate if key was pressed within this time
+        // キー入力から300ms間はAMLを発動しない
+        require-prior-idle-ms = <300>;
+        
+        // Reset accumulated movement after this timeout
+        // 蓄積された移動量をリセットするまでの時間
+        reset-timeout-ms = <400>;
+    };
 };
 
 &pointer_accel {
@@ -73,7 +91,7 @@
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
             &zip_x_scaler 3 5
             &zip_y_scaler 3 4
-            &zip_temp_layer 3 60000
+            &zip_temp_layer_threshold 3 60000
             &pointer_accel
         >;
         scroller {
